@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <h1>Contacts List</h1>
+
+    <div class="contactsList_div">
+        <ul>
+            <%for(let i of contact_List){%>
+                <div>
+                    <li>
+                        <div>
+                            <div class="non-block">
+                                <p><%=i.name%></p>
+                                <p><%=i.phone%></p>
+                            </div>
+                            <div class="non-block" id="delete-button">
+                                <!-- <a href="/delete-contact/<%=i.phone%>"><i class="fa-solid fa-trash"></i></a>                STRING PARAM -->
+                                <a href="/delete-contact/?mobile=<%= i.phone%>"><i class="fa-solid fa-trash"></i></a>      <!-- QUERY PARAM-->
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            <%}%>
+        </ul>
+    </div>
+
+    <div class="contactsList_div">
+        <form action="/create-contact", method="post">
+            <input type="text" name="name" placeholder="Enter name" required>
+            <input type="number" name="phone" placeholder="Mobile number" required>
+            <button type="submit">Add Contact</button>
+        </form>
+    </div>
+
+</body>
+</html>

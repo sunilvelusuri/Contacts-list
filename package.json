@@ -1,11 +1,24 @@
 {
-  "name": "q",
+  "name": "contacts-list",
   "version": "1.0.0",
   "description": "A basi contacts list app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Sunil",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunilvelusuri/Contacts-list.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sunilvelusuri/Contacts-list/issues"
+  },
+  "homepage": "https://github.com/sunilvelusuri/Contacts-list#readme"
 }
